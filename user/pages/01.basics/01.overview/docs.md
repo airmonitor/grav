@@ -7,7 +7,7 @@ taxonomy:
 
 ###Lista niezbędnych komponentów:
 
-1. Sensor mierzący **PM1, PM2,5 oraz PM10** taki jak Nova Fitness [SDS021](http://allegro.pl/sensor-powietrza-sds021-pm2-5-pm10-i6898587945.html)/011 (mierzy cząsteczki PM2,5 oraz PM10) bądź Plantower [PMS7003](http://allegro.pl/show_item.php?item=7097428244)/5003 (mierzy cząsteczki PM1, PM2,5 oraz PM10). Specyfikacja techniczna: [PMS5003](airmonitor.pl/images/PMS5003.pdf), [PMS5007](airmonitor.pl/images/PMS5007.pdf). Wymienione sensory można nabyć na allegro, kamami.pl, botland, aliexpress, taobao etc.
+1. Sensor mierzący **PM1, PM2,5 oraz PM10** taki jak Nova Fitness [SDS021](http://allegro.pl/sensor-powietrza-sds021-pm2-5-pm10-i6898587945.html)/011 (mierzy cząsteczki PM2,5 oraz PM10) bądź Plantower [PMS7003](http://allegro.pl/show_item.php?item=7097428244)/5003 (mierzy cząsteczki PM1, PM2,5 oraz PM10). Wymienione sensory można nabyć na allegro, kamami.pl, botland, aliexpress, taobao etc.
 2. Raspberry Pi Zero W
 
 ###Lista komponentów, które nie są niezbędne aczkolwiek przydatne
