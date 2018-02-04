@@ -54,3 +54,8 @@ Dla sensora Plantower PMS7003 wykorzystamy wyłącznie piny celem zasilania jak 
 
 >>>>Sensor Plantower PMS7003 będzie pracował bez hibernacji, z tego powodu możemy wykorzystać wyłącznie piny Raspberry Pi.
 
+###Wersja podstawowa w oparciu o EspEasy Mega
+
+Opis dotyczy wersji mega-20180126.
+Układ komponentów w puszce identyczny.
+

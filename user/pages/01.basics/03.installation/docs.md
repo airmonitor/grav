@@ -139,3 +139,18 @@ systemctl enable watchdog
 
 
 >>>>Pamiętaj aby podmienić długość oraz szerokość geograficzną w pliku **/etc/configuration/configuration.data** oraz **wypełnić [formularz](https://docs.google.com/forms/d/e/1FAIpQLSdw72_DggyrK7xnSQ1nR11Y-YK4FYWk_MF9QbecpOERql-T2w/viewform)** jeśli chcesz aby upublicznić Twoje pomiary
+
+###Konfiguracja EspEasy Mega (mega-20180126)
+
+1. Zmień nazwę jednostki wg wzoru **szerokość geograficzna_długość geograficzna_SDSESP**. Przykład na poniższej ilustracji:
+![Zrzut ekranu prezentujący konfigurację](http://airmonitor.pl/images/image30.jpg)
+
+Po restarcie ekran startowy powinien wyświetlać nową nazwę:
+![Zrzut ekranu prezentujący stronę główną](http://airmonitor.pl/images/image28.jpg)
+
+2. Przejdź do zakładki **Controllers** a następnie skonfiguruj usługę OpenHAB MQTT wypełniając pola wg poniższego zrzutu ekranu:
+![Zrzut ekranu prezentujący zakładkę controllers](http://airmonitor.pl/images/image31.jpg)
+
+3. W zakładce **Devices** dodaj sensor Nova SDS011/018/198/021 postępując według poniżej ilustracji:
+![Zrzut ekranu prezentujący zakładkę devices](http://airmonitor.pl/images/image29.jpg)
+
