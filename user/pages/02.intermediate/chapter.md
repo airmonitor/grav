@@ -6,8 +6,8 @@ taxonomy:
 ##Rozszerzenie funkcjonalności stacji o sensor mierzący temperaturę, wilgotność oraz ciśnienie
 
 ###Lista niezbędnych komponentów:
-1. BME280, dostępne na [allegro.pl](http://allegro.pl/bme280-czujnik-cisnienia-temperatury-wilgotnosci-i7136831171.html), polskich sklepach z elektroniką czy aliexpress
-2. Stację pomiarową zbudowaną z działu poprzedniego [Pyły PM1, PM2,5, PM10](http://airmonitor.pl/basics/overview)
+1. BME280, dostępne na [allegro.pl](http://allegro.pl/bme280-czujnik-cisnienia-temperatury-wilgotnosci-i6921461782.html), polskich sklepach z elektroniką czy aliexpress
+2. Stację pomiarową zbudowaną z działu poprzedniego [Pyły PM1, PM2,5, PM10](http://lintech.hekko24.pl/basics/overview)
 
 
 
@@ -30,4 +30,4 @@ chmod +x /etc/configuration/*.py
 (crontab -l 2>/dev/null; echo "*/5 * * * * /etc/configuration/bme280.py") | crontab -
 ```
 
->>>>>Skrypt pytona wykorzystuje wcześniej pobrany plik (configuration.data) z GitHub'a (patrz dział [Pyły PM1, PM2,5, PM10](http://airmonitor.pl/basics/requirements)).
+>>>>>Skrypt pytona wykorzystuje wcześniej pobrany plik (configuration.data) z GitHub'a (patrz dział [Pyły PM1, PM2,5, PM10](http://lintech.hekko24.pl/basics/requirements)).

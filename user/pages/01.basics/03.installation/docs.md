@@ -9,7 +9,7 @@ Celem skrócenia czasu potrzebnego na instalację oraz konfigurację systemu wyk
 
 >>>>>PiBakery umożliwia automatyczną instalację systemu oraz późniejszą konfigurację. Dzięki temu po zakończonym procesie instalacji oraz konfiguracji uzyskasz w pełni działający sensor rejestrujący oraz wysyłający zmierzone wartości do serwisu airmonitor.pl
 
-1. Pobieramy [przepis (dla sensorów SDS*)](https://raw.githubusercontent.com/airmonitor/home_air_monitor/master/recipe_short.xml), który następnie należy zaimportować w PiBakery
+1. Pobieramy [przepis](https://raw.githubusercontent.com/airmonitor/home_air_monitor/master/recipe_short.xml), który następnie należy zaimportować w PiBakery
 ![Import przepisu w PiBakery](http://airmonitor.pl/images/image11.jpg)
 
 2. Zmień SSID sieci wifi (pi) oraz klucz dostępu (h0m3a1rm0n1t0r!)
@@ -18,14 +18,15 @@ Celem skrócenia czasu potrzebnego na instalację oraz konfigurację systemu wyk
 3. Zapisz obraz ( dla Raspberry Pi 0 W sugeruję obraz lite )
 ![Zapis przepisu na karcie microsd](http://airmonitor.pl/images/image8.jpg)
 
-4. Za pomocą [Notepad++](https://notepad-plus-plus.org/) wyedytuj plik configuration.data
-![Zrzut ekranu prezentujący partycję boot z plikiem configuration.data](http://airmonitor.pl/images/image6.jpg)
-Odpowiednio zamień wpisy dotyczące długości (long) i szerokości (lat) geograficznej.
+4. Utwórz plik tekstowy o nazwie airmonitor.txt na karcie microsd i umieść w nim
+![Zrzut ekranu prezentujący partycję boot z plikiem airmonitor.txt](http://airmonitor.pl/images/image6.jpg)
+- pierwsza linia - szerokość geograficzna (latitude) umiejscowienia sensora
+- druga linia - długość geograficzna (longitude) umiejscowienia sensora.
 
->>>>>>Szerokość jak i długość geograficzną możesz znaleźć korzystając [http://mapa.airmonitor.pl](http://mapa.airmonitor.pl). Kliknij w miejsce na mapie a w dymku znajdziesz szerokość oraz długość geograficzną.
+>>>>>>Szerokość jak i długość geograficzną możesz znaleźć korzystając http://mapa.airmonitor.pl. Kliknij w miejsce na mapie a w dymku znajdziesz szerokość oraz długość geograficzną.
 
 Przykład prawidłowo wypełnionego pliku airmonitor.txt, **pamiętaj aby umieścić dane geograficzne umiejscowienia sensora!:**
-![Plik configuration.data](http://airmonitor.pl/images/image18.jpg)
+![Plik airmonitor.txt](http://airmonitor.pl/images/image18.jpg)
 
 5. Wyciągnij kartę microsd z czytnika i umieść ją w Raspberry Pi, podłącz zasilanie.
 
@@ -33,16 +34,10 @@ Przykład prawidłowo wypełnionego pliku airmonitor.txt, **pamiętaj aby umieś
 
 6. Wypełnij [formularz](https://docs.google.com/forms/d/e/1FAIpQLSdw72_DggyrK7xnSQ1nR11Y-YK4FYWk_MF9QbecpOERql-T2w/viewform) wykorzystując wcześniej zapisane wartości szerokości i długości geograficznej. Bez wypełnienia formularza mapa nie zostanie zaktualizowana o Twój sensor. W przeciągu kilku godzin zauważysz na mapie uruchomiony przez Ciebie sensor oznaczony pinezką.
 
->>>>>**Źródła wszystkich skryptów znajdziesz na [GitHub](https://github.com/airmonitor/home_air_monitor)**.
-
-
+>>>>>**Źródła wszystkich skryptów znajdziesz na [GitHub](https://github.com/airmonitor/home_air_monitor)**
 
 
 ##Instalacja manualna dla sensorów SDS*
-
-
->>>>Pamiętaj aby istniała wyłącznie biblioteka pythona **pyserial a nie serial**. Najprościej odinstalować bibliotekę serial -> reboot a następnie zainstalować pyserial. Komendy poniżej.
-
 ```js
 echo "dtoverlay=pi3-disable-bt" >> /boot/config.txt
 echo "dtparam=i2c_arm=on" >> /boot/config.txt
@@ -63,7 +58,6 @@ pip3 install -U RPi.bme280
 pip3 install -U influxdb
 pip3 install -U configparser
 pip3 install -U urllib3
-pip3 uninstall serial
 
 
 mkdir /etc/configuration
@@ -94,12 +88,7 @@ systemctl enable watchdog
 ```
 
 
-###Instalacja manualna dla sensorów PMS*
-
-
->>>>Pamiętaj aby istniała wyłącznie biblioteka pythona **pyserial a nie serial**. Najprościej odinstalować bibliotekę serial -> reboot a następnie zainstalować pyserial. Komendy poniżej.
-
-
+###Instalacja manialna dla sensorów PMS*
 ```js
 echo "dtoverlay=pi3-disable-bt" >> /boot/config.txt
 echo "dtparam=i2c_arm=on" >> /boot/config.txt
@@ -120,7 +109,6 @@ pip3 install -U RPi.bme280
 pip3 install -U influxdb
 pip3 install -U configparser
 pip3 install -U urllib3
-pip3 uninstall serial
 
 
 mkdir /etc/configuration
