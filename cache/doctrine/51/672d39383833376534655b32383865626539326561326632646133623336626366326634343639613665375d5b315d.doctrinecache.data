@@ -1,0 +1,69 @@
+1510439140
+a:2:{s:7:"content";s:2944:"<h3>Wersja podstawowa</h3>
+<p>Dla sensorów Nova SDS* wykorzystamy zasilanie z USB oraz piny UART.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Zasilanie z USB eliminuje problem restartów raspberry pi gdy zasilanie dla sensora SDS jest dostarczane bezpośrednio z pinów. Zasilamy z USB jeszcze z jednego powodu, sensory SDS mają relatywnie krótką żywotność a jest to 8000h nieprzerwanej pracy.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><img src="http://airmonitor.pl/images/image20.jpg" alt="Schemat wyprowadzenia przewodów dla SDS021/11/18" /></p>
+<p><strong>Przewód niebieski od sensora łączymy z pinem 10, natomiast przewód żółty z pinem 8.</strong> </p>
+<p>Tak wyglądałaby wersja podstawowa, możnaby rzec biurkowa urządzenia, które mierzy pyły PM2,5 oraz PM10.</p>
+<h3>Wersja deluxe</h3>
+<p>Umieśćmy sensor pyłów w puszce. Dzięki temu zabiegowi będziesz w stanie dokonywać pomiarów na świeżym powietrzu bądź bardziej zamaskować urządzenie w domu - chowając je pomiędzy książkami ;)</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Puszka ma to do siebie, że ogranicza przepływ powietrz. Aby zapewnić jego optymalny ruch konieczne jest zastosowanie wentylatora.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ol>
+<li>
+<p>Podłącz wentylator do raspberry pi.
+<img src="http://airmonitor.pl/images/image1.jpg" alt="Schemat wyprowadzenia przewodów dla wentylatora" /></p>
+</li>
+<li>
+<p>Używając pilnika powiększ otwory w puszce.
+<img src="http://airmonitor.pl/images/image4.jpg" alt="Obudowa" /></p>
+</li>
+<li>
+<p>Przyklej wydruk 3D w powiększony w poprzednim kroku otwór.
+<img src="http://airmonitor.pl/images/image12.jpg" alt="Przyklejona do obudowy osłona na deszcz." /></p>
+</li>
+<li>
+<p>Powiększ kolejny otwór znajdujący się na środku puszki oraz przyklej wydruk 3D.
+<img src="http://airmonitor.pl/images/image17.jpg" alt="Przyklejona do obudowy druga osłona na deszcz" /></p>
+</li>
+<li>Wentylator o rozmiarze 40 x 40 mm przymocuj za pomocą kleju na gorąco jak na poniższym zdjęciu. 
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Pamiętaj, aby umieścić wentylator w ten sposób, aby powietrze wydmuchiwane było skierowane na zewnątrz obudowy.
+<img src="http://airmonitor.pl/images/image23.jpg" alt="Przyklejony do obudowy wentylator." /></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote></li>
+</ol>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Wentylator zasilany jest napięciem 3V, a nie 5V. Ma to na celu wydłużenie czasu pracy wentylatora, a ponadto nie jest potrzebny, aż taki ruch powietrza, jak w przypadku, gdy wentylator jest zasilany napięciem 5V.
+<img src="http://airmonitor.pl/images/image10.jpg" alt="Przyklejony do obudowy wentylator (w zbliżeniu)." /></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>";s:12:"content_meta";N;}

@@ -1,0 +1,13 @@
+name: RTFM Site
+version: 1.0.2
+description: ""
+icon: book
+author:
+  name: Team Grav
+  email: devs@getgrav.org
+  url: http://getgrav.org
+homepage: https://github.com/getgrav/grav-skeleton-rtfm-site
+demo: http://demo.getgrav.org/rtfm-skeleton
+keywords: pm10, pm2,5, pm1, pyłomierz, smog, stacja pogody
+bugs: https://github.com/getgrav/grav-skeleton-rtfm-site/issues
+license: MIT

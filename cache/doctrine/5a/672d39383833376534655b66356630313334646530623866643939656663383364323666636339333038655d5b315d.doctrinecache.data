@@ -1,0 +1,16 @@
+1510438325
+a:2:{s:7:"content";s:825:"<p>Dla sensorów Nova SDS* wykorzystamy zasilanie z USB oraz piny UART.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Zasilanie z USB eliminuje problem restartów raspberry pi gdy zasilanie dla sensora SDS jest dostarczane bezpośrednio z pinów. Zasilamy z USB jeszcze z jednego powodu, sensory SDS mają relatywnie krótką żywotność a jest to 8000h nieprzerwanej pracy.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><img src="http://airmonitor.pl/images/image20.jpg" alt="Schemat wyprowadzenia przewodów dla SDS021/11/18" /></p>
+<p><strong>Przewód niebieski od sensora łączymy z pinem 10, natomiast przewód żółty z pinem 8.</strong> </p>
+<p>Tak wyglądałaby wersja podstawowa, możnaby rzec biurkowa urządzenia, które mierzy pyły PM2,5 oraz PM10.</p>";s:12:"content_meta";N;}

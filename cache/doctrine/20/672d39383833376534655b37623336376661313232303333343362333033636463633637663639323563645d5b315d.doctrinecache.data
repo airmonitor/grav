@@ -1,0 +1,76 @@
+1510438211
+a:2:{s:7:"content";s:3224:"<p>Celem skrócenia czasu potrzebnego na instalację oraz konfigurację systemu wykorzystamy <a href="http://www.pibakery.org/download.html">PiBakery</a></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>PiBakery umożliwia automatyczną instalację systemu oraz późniejszą konfigurację. Dzięki temu po zakończonym procesie instalacji oraz konfiguracji uzyskasz w pełni działający sensor rejestrujący oraz wysyłający zmierzone wartości do serwisu airmonitor.pl</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<ol>
+<li>
+<p>Pobieramy <a href="https://raw.githubusercontent.com/airmonitor/home_air_monitor/master/recipe_short.xml">przepis</a>, który następnie należy zaimportować w PiBakery
+<img src="http://airmonitor.pl/images/image11.jpg" alt="Import przepisu w PiBakery" /></p>
+</li>
+<li>
+<p>Zmień SSID sieci wifi (pi) oraz klucz dostępu (h0m3a1rm0n1t0r!)
+<img src="http://airmonitor.pl/images/image5.jpg" alt="Zmiana SSID wifi oraz hasła" /></p>
+</li>
+<li>
+<p>Zapisz obraz ( dla Raspberry Pi 0 W sugeruję obraz lite )
+<img src="http://airmonitor.pl/images/image8.jpg" alt="Zapis przepisu na karcie microsd" /></p>
+</li>
+<li>Utwórz plik tekstowy o nazwie airmonitor.txt na karcie microsd i umieść w nim
+<img src="http://airmonitor.pl/images/image6.jpg" alt="Zrzut ekranu prezentujący partycję boot z plikiem airmonitor.txt" />
+<ul>
+<li>pierwsza linia - szerokość geograficzna (latitude) umiejscowienia sensora</li>
+<li>druga linia - długość geograficzna (longitude) umiejscowienia sensora.</li>
+</ul></li>
+</ol>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Szerokość jak i długość geograficzną możesz znaleźć korzystając http://mapa.airmonitor.pl. Kliknij w miejsce na mapie a w dymku znajdziesz szerokość oraz długość geograficzną.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Przykład prawidłowo wypełnionego pliku airmonitor.txt, <strong>pamiętaj aby umieścić dane geograficzne umiejscowienia sensora!:</strong>
+<img src="http://airmonitor.pl/images/image18.jpg" alt="Plik airmonitor.txt" /></p>
+<ol start="5">
+<li>Wyciągnij kartę microsd z czytnika i umieść ją w Raspberry Pi, podłącz zasilanie.</li>
+</ol>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Teraz nastąpi proces instalacji oraz konfiguracji systemu oraz sensora. Wszystkie zautomatyzowane czynności powinny zakończyć się w przeciągu godziny. Po automatycznym restarcie sensor zacznie wysyłać dane.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<ol start="6">
+<li>Wypełnij <a href="https://docs.google.com/forms/d/e/1FAIpQLSdw72_DggyrK7xnSQ1nR11Y-YK4FYWk_MF9QbecpOERql-T2w/viewform">formularz</a> wykorzystując wcześniej zapisane wartości szerokości i długości geograficznej. Bez wypełnienia formularza mapa nie zostanie zaktualizowana o Twój sensor.</li>
+</ol>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>W przeciągu kilku godzin zauważysz na mapie uruchomiony przez Ciebie sensor oznaczony pinezką.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>";s:12:"content_meta";N;}
