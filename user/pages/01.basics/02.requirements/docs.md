@@ -3,7 +3,7 @@ title: Schemat
 taxonomy:
     category: docs
 ---
-###Wersja podstawowa w oparciu o SDS*
+###Wersja podstawowa w oparciu o sensor SDS*
 
 Dla sensorów Nova SDS* wykorzystamy zasilanie z USB oraz piny UART.
 
@@ -17,7 +17,7 @@ Dla sensorów Nova SDS* wykorzystamy zasilanie z USB oraz piny UART.
 Tak wyglądałaby wersja podstawowa, możnaby rzec biurkowa urządzenia, które mierzy pyły PM2,5 oraz PM10.
 
 
-###Wersja deluxe
+###Wersja rozszerzona w oparciu o sensor SDS*
 
 Umieśćmy sensor pyłów w puszce. Dzięki temu zabiegowi będziesz w stanie dokonywać pomiarów na świeżym powietrzu bądź bardziej zamaskować urządzenie w domu - chowając je pomiędzy książkami ;)
 
@@ -29,7 +29,7 @@ Umieśćmy sensor pyłów w puszce. Dzięki temu zabiegowi będziesz w stanie do
 2. Używając pilnika powiększ otwory w puszce.
 ![Obudowa](http://airmonitor.pl/images/image4.jpg)
 
-3. Przyklej wydruk 3D w powiększony w poprzednim kroku otwór.
+3. Przyklej [wydruk 3D](https://github.com/airmonitor/home_air_monitor/blob/master/80x80x40mm.stl) w powiększony w poprzednim kroku otwór. Jeśli nie posiadasz drukarki 3D napisz do Nas wiadomość, prześlemy Tobie wydruki 3D.
 ![Przyklejona do obudowy osłona na deszcz.](http://airmonitor.pl/images/image12.jpg)
 
 4. Powiększ kolejny otwór znajdujący się na środku puszki oraz przyklej wydruk 3D.
@@ -48,14 +48,14 @@ Umieśćmy sensor pyłów w puszce. Dzięki temu zabiegowi będziesz w stanie do
 ![Cały zestaw mierzący PM10 oraz PM2,5.](http://airmonitor.pl/images/image19.jpg)
 
 
-###Wersja podstawowa w oparciu o PMS7003
+###Wersja podstawowa w oparciu o [PMS7003](http://allegro.pl/show_item.php?item=7097428244)
 
-Dla sensora Plantower PMS7003 wykorzystamy wyłącznie piny celem zasilania jak i komunikacji.
+Dla sensora Plantower [PMS7003](http://allegro.pl/show_item.php?item=7097428244) wykorzystamy wyłącznie piny celem zasilania jak i komunikacji.
 
->>>>Sensor Plantower PMS7003 będzie pracował bez hibernacji, z tego powodu możemy wykorzystać wyłącznie piny Raspberry Pi.
+>>>Sensor Plantower [PMS7003](http://allegro.pl/show_item.php?item=7097428244) będzie pracował bez hibernacji, z tego powodu możemy wykorzystać wyłącznie piny Raspberry Pi.
 
-###Wersja podstawowa w oparciu o EspEasy Mega
+![Schemat połączenia Raspberry Pi 0 W z [PMS7003](http://allegro.pl/show_item.php?item=7097428244).](http://airmonitor.pl/images/image26.jpg)
 
-Opis dotyczy wersji mega-20180126.
-Układ komponentów w puszce identyczny.
+>>>>>Pamiętaj port TXD z RPi0W połącz z RXD na [PMS7003](http://allegro.pl/show_item.php?item=7097428244) oraz RXD z RPi0W połącz z TXD na [PMS7003](http://allegro.pl/show_item.php?item=7097428244) 
+
 
