@@ -11,6 +11,7 @@ taxonomy:
 2. Raspberry Pi Zero W 
 3. Alternatywnie zamiast Raspberry Pi Zero W  - mikrokontroler zdolny do uruchomienia [EspEasy Mega](https://www.letscontrolit.com/wiki/index.php/ESPEasyMega)
 
+
 ###Lista komponentów, które nie są niezbędne aczkolwiek przydatne
 
 1. [Puszka](http://allegro.pl/puszka-hermetyczna-natynkowa-biala-86x86x40-i6721562850.html) hermetyczna natynkowa 
