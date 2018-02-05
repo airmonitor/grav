@@ -8,7 +8,8 @@ taxonomy:
 ###Lista niezbędnych komponentów:
 
 1. Sensor mierzący **PM1, PM2,5 oraz PM10** taki jak Nova Fitness [SDS021](http://allegro.pl/sensor-powietrza-sds021-pm2-5-pm10-i6898587945.html)/011 (mierzy cząsteczki PM2,5 oraz PM10) bądź Plantower [PMS7003](http://allegro.pl/show_item.php?item=7097428244)/5003 (mierzy cząsteczki PM1, PM2,5 oraz PM10). Specyfikacja techniczna: [PMS5003](http://airmonitor.pl/images/PMS5003.pdf), [PMS7003](http://airmonitor.pl/images/PMS7003.pdf). Wymienione sensory można nabyć na allegro, kamami.pl, botland, aliexpress, taobao etc.
-2. Raspberry Pi Zero W bądź mikrokontroler zdolny do uruchomienia [EspEasy Mega](https://www.letscontrolit.com/wiki/index.php/ESPEasyMega)
+2. Raspberry Pi Zero W 
+3. Alternatywnie zamiast Raspberry Pi Zero W  - mikrokontroler zdolny do uruchomienia [EspEasy Mega](https://www.letscontrolit.com/wiki/index.php/ESPEasyMega)
 
 ###Lista komponentów, które nie są niezbędne aczkolwiek przydatne
 
