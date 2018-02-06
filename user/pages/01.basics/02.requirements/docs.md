@@ -3,7 +3,7 @@ title: Schemat
 taxonomy:
     category: docs
 ---
-###Wersja podstawowa w oparciu o sensor SDS*
+###Wersja podstawowa w oparciu o sensor SDS* oraz Raspberry Pi 0 W
 
 Dla sensorów Nova SDS* wykorzystamy zasilanie z USB oraz piny UART.
 
@@ -13,11 +13,10 @@ Dla sensorów Nova SDS* wykorzystamy zasilanie z USB oraz piny UART.
 
 **Przewód niebieski od sensora łączymy z pinem 10, natomiast przewód żółty z pinem 8.** 
 
-
 Tak wyglądałaby wersja podstawowa, możnaby rzec biurkowa urządzenia, które mierzy pyły PM2,5 oraz PM10.
 
 
-###Wersja rozszerzona w oparciu o sensor SDS*
+###Wersja rozszerzona w oparciu o sensor SDS* oraz Raspberry Pi 0 W
 
 Umieśćmy sensor pyłów w puszce. Dzięki temu zabiegowi będziesz w stanie dokonywać pomiarów na świeżym powietrzu bądź bardziej zamaskować urządzenie w domu - chowając je pomiędzy książkami ;)
 
@@ -48,7 +47,7 @@ Umieśćmy sensor pyłów w puszce. Dzięki temu zabiegowi będziesz w stanie do
 ![Cały zestaw mierzący PM10 oraz PM2,5.](http://airmonitor.pl/images/image19.jpg)
 
 
-###Wersja podstawowa w oparciu o [PMS7003](http://allegro.pl/show_item.php?item=7097428244)
+###Wersja podstawowa w oparciu o [PMS7003](http://allegro.pl/show_item.php?item=7097428244) oraz Raspberry Pi 0 W
 
 Dla sensora Plantower [PMS7003](http://allegro.pl/show_item.php?item=7097428244) wykorzystamy wyłącznie piny celem zasilania jak i komunikacji.
 
@@ -58,4 +57,7 @@ Dla sensora Plantower [PMS7003](http://allegro.pl/show_item.php?item=7097428244)
 
 >>>>>Pamiętaj port TXD z RPi0W połącz z RXD na [PMS7003](http://allegro.pl/show_item.php?item=7097428244) oraz RXD z RPi0W połącz z TXD na [PMS7003](http://allegro.pl/show_item.php?item=7097428244) 
 
+###Wersja rozszerzona w oparciu o sensor SDS* oraz EspEasy Mega
+
+![Schemat wyprowadzenia przewodów dla SDS021/11/18](http://airmonitor.pl/images/image32.jpg)
 
