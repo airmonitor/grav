@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../AirMonitor/.idea/AirMonitor.iml" filepath="$PROJECT_DIR$/../AirMonitor/.idea/AirMonitor.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/AirMonitorWebsiteGitHub.iml" filepath="$PROJECT_DIR$/.idea/AirMonitorWebsiteGitHub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../StorageAutomation/.idea/StorageAutomation.iml" filepath="$PROJECT_DIR$/../StorageAutomation/.idea/StorageAutomation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Vmax Decommission/.idea/Vmax Decommission.iml" filepath="$PROJECT_DIR$/../Vmax Decommission/.idea/Vmax Decommission.iml" />
     </modules>
   </component>
 </project>
