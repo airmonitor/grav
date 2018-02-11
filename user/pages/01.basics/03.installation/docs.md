@@ -88,7 +88,7 @@ systemctl enable watchdog
 ```
 
 
-###Instalacja manialna dla sensorów PMS*
+###Instalacja manualna dla sensorów PMS*
 ```js
 echo "dtoverlay=pi3-disable-bt" >> /boot/config.txt
 echo "dtparam=i2c_arm=on" >> /boot/config.txt
