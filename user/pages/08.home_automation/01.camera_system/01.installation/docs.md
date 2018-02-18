@@ -13,5 +13,12 @@ taxonomy:
 ###Instalacja i konfiguracja ZoneMinder'a (wersja dla Ubuntu)
 4. Zainstaluj zoneminder wykorzystując [instrukcję](http://zoneminder.readthedocs.io/en/stable/installationguide/ubuntu.html)
 5. Dodaj kamerę wspierając się na poniżych zrzutach ekranu:
-![1]()
+![ZM_Camera01.jpg](http://airmonitor.pl/images/ZM_Camera01.jpg)
+
+![ZM_Camera02.jpg](http://airmonitor.pl/images/ZM_Camera02.jpg)
+
+6. Opcjonalnie. Dodaj kamerę do domoticza. Pełny ImageURL to /zm/cgi-bin/zms?mode=single&monitor=1& (dla kamery o ID=1):
+![Domoticz_camera.jpg](http://airmonitor.pl/images/Domoticz_camera.jpg)
+
+
 
