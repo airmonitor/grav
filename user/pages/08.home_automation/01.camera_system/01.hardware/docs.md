@@ -16,4 +16,4 @@ taxonomy:
 1. Uchwyt [mocujący](https://www.aliexpress.com/item/Weather-Resistance-waterproof-Plastic-Housing-camera-case-For-WyzeCam-xiaomi-xiaofang-1080p-HD-Wireless-Smart-Home/32845116020.html?spm=2114.10010108.1000013.3.4ac14ef6Eufe9o&traffic_analysisId=recommend_2088_2_90158_iswistore&scm=1007.13339.90158.0&pvid=4fdd5093-6429-4304-93d5-6d8dc5cb5bb4&tpp=1) dla kamery
 
 
->>>>>Dla 4 kamer wykorzystuję maszynę wirtualną opartą o 4GB RAM, CPU z 4 rdzeniami(Intel Avoton C2750), 600GB HDD na partycję /var/cache/zoneminder - powinien wystarczyć na tydzień zapisu przy wykrytym ruchu przez kamery. Nie przyjmuj powyższych za stałe wartości a wyłącznie za informację ogólną od jakich parametrów zacząć.
+>>>>>Dla 4 kamer wykorzystuję maszynę wirtualną opartą o 4GB RAM, CPU z 4 rdzeniami(Intel Avoton C2750), 600GB HDD na partycję /var/cache/zoneminder - powinna wystarczyć na tydzień zapisu przy wykrytym ruchu przez kamery. Nie przyjmuj powyższych wartości za żelazną zasadę a wyłącznie za informację ogólną od jakich parametrów zacząć.
