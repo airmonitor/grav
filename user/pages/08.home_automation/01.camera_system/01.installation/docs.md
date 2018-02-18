@@ -30,8 +30,9 @@ rm /etc/mysql/my.cnf
 cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/my.cnf
 nano /etc/mysql/my.cnf
 ```
+
 do sekcji [mysqld] dodaj:
-sql_mode = NO_ENGINE_SUBSTITUTION
+```sql_mode = NO_ENGINE_SUBSTITUTION```
 
 ```
 systemctl restart mysql
@@ -54,9 +55,7 @@ nano /etc/php/7.1/apache2/php.ini
 ```
 
 do sekcji [Date] dodaj:
-```bash
-date.timezone = Europe/Warsaw
-```
+```date.timezone = Europe/Warsaw```
 
 ```bash
 systemctl reload apache2
