@@ -1,5 +1,5 @@
 ---
-title: Potrzebne komponenty
+title: Monitoring
 taxonomy:
     category: docs
 ---
