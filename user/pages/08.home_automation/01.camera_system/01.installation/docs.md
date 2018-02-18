@@ -17,7 +17,7 @@ taxonomy:
 
 ![ZM_Camera2.jpg](http://airmonitor.pl/images/ZM_Camera2.jpg)
 
-6. Opcjonalnie. Dodaj kamerę do domoticza. Pełny ImageURL to /zm/cgi-bin/zms?mode=single&monitor=1& (dla kamery o ID=1):
+6. Opcjonalnie. Dodaj kamerę do domoticza. Pełny ImageURL to */zm/cgi-bin/zms?mode=single&monitor=1& (dla kamery o ID=1)*:
 ![Domoticz_camera.jpg](http://airmonitor.pl/images/Domoticz_camera.jpg)
 
 
