@@ -11,7 +11,62 @@ taxonomy:
 3. Zmodyfikuj ustawienia kamery wykorzystując [instrukcję](https://github.com/samtap/fang-hacks)
 
 ###Instalacja i konfiguracja ZoneMinder'a (wersja dla Ubuntu)
-4. Zainstaluj zoneminder wykorzystując [instrukcję](http://zoneminder.readthedocs.io/en/stable/installationguide/ubuntu.html)
+4. Zainstaluj zoneminder wykorzystując opis poniżej:
+
+```bash
+sudo su
+tasksel install lamp-server
+add-apt-repository ppa:iconnor/zoneminder
+apt-get update
+apt-get upgrade
+apt-get dist-upgrade
+apt-get install zoneminder
+```
+
+*Konfiguracja MySQL:*
+
+```bash
+rm /etc/mysql/my.cnf
+cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/my.cnf
+nano /etc/mysql/my.cnf
+```
+do sekcji [mysqld] dodaj:
+sql_mode = NO_ENGINE_SUBSTITUTION
+
+```
+systemctl restart mysql
+mysql -uroot -p < /usr/share/zoneminder/db/zm_create.sql
+mysql -uroot -p -e "grant select,insert,update,delete,create,alter,index,lock tables on zm.* to 'zmuser'@localhost identified by 'zmpass';"
+
+
+chmod 740 /etc/zm/zm.conf
+chown root:www-data /etc/zm/zm.conf
+chown -R www-data:www-data /usr/share/zoneminder/
+
+a2enconf zoneminder
+a2enmod cgi
+a2enmod rewrite
+
+systemctl enable zoneminder
+systemctl start zoneminder
+
+nano /etc/php/7.1/apache2/php.ini
+```
+
+do sekcji [Date] dodaj:
+```bash
+date.timezone = Europe/Warsaw
+```
+
+```bash
+systemctl reload apache2
+```
+
+ZoneMinder powinien być zainstalowany oraz nasłuchować. Uruchom przeglądarkę i przejdź pod adres http://<ZoneMinder IP>/zm
+
+Oryginalna [instrukcja](http://zoneminder.readthedocs.io/en/stable/installationguide/ubuntu.html) instalacji.
+
+
 5. Dodaj kamerę wspierając się na poniżych zrzutach ekranu:
 ![ZM_Camera1.jpg](http://airmonitor.pl/images/ZM_Camera1.jpg)
 
