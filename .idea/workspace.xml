@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/user/pages/08.home_automation/01.camera_system/01.installation/docs.md" line="59" mnemonic="8" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f797258-7054-4e17-81f5-5f5c8c2e8904" name="Default" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="6f797258-7054-4e17-81f5-5f5c8c2e8904" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/pages/08.home_automation/01.camera_system/01.installation/docs.md" beforeDir="false" afterPath="$PROJECT_DIR$/user/pages/08.home_automation/01.camera_system/01.installation/docs.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,7 +16,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="docs.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/user/pages/08.home_automation/01.camera_system/01.installation/docs.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="153">
+                <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chapter.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/pages/07.air_cleaning/chapter.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-1479" />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -31,14 +58,14 @@
         <option value="$PROJECT_DIR$/user/pages/01.basics/02.requirements/docs.md" />
         <option value="$USER_HOME$/Desktop/vmax_cr_creation.bash" />
         <option value="$PROJECT_DIR$/../Vmax Decommission/vmax_cr_creation.sh" />
+        <option value="$PROJECT_DIR$/user/pages/08.home_automation/01.camera_system/01.installation/docs.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="418" />
-    <option name="y" value="47" />
-    <option name="width" value="1364" />
-    <option name="height" value="945" />
+    <option name="x" value="960" />
+    <option name="width" value="960" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -54,11 +81,25 @@
           <expand>
             <path>
               <item name="AirMonitorWebsiteGitHub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StorageAutomation" type="462c0819:PsiDirectoryNode" />
+              <item name="AirMonitorWebsiteGitHub" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AirMonitorWebsiteGitHub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vmax Decommission" type="462c0819:PsiDirectoryNode" />
+              <item name="AirMonitorWebsiteGitHub" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AirMonitorWebsiteGitHub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AirMonitorWebsiteGitHub" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AirMonitorWebsiteGitHub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AirMonitorWebsiteGitHub" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="07.air_cleaning" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -299,13 +340,28 @@
       <option name="project" value="LOCAL" />
       <updated>1517921306002</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Changes">
+      <created>1519023813738</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1519023813738</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Changes">
+      <created>1519023880866</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1519023880866</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="418" y="47" width="1364" height="945" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33760363" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23591363" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -419,5 +475,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../StorageAutomation/vmax_cr_creation.sh" />
+    <entry file="file://$PROJECT_DIR$/user/pages/07.air_cleaning/chapter.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1479" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/pages/08.home_automation/01.camera_system/01.installation/docs.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="153">
+            <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

@@ -23,7 +23,7 @@ apt-get dist-upgrade
 apt-get install zoneminder
 ```
 
-*Konfiguracja MySQL:*
+**Konfiguracja MySQL:**
 
 ```bash
 rm /etc/mysql/my.cnf
@@ -32,7 +32,7 @@ nano /etc/mysql/my.cnf
 ```
 
 
-do sekcji *[mysqld]* dodaj:
+do sekcji **[mysqld]** dodaj:
 
 ```sql_mode = NO_ENGINE_SUBSTITUTION```
 
@@ -57,7 +57,7 @@ nano /etc/php/7.1/apache2/php.ini
 ```
 
 
-do sekcji *[Date]* dodaj:
+do sekcji **[Date]** dodaj:
 
 ```date.timezone = Europe/Warsaw```
 
@@ -65,7 +65,7 @@ do sekcji *[Date]* dodaj:
 systemctl reload apache2
 ```
 
-ZoneMinder powinien być zainstalowany oraz nasłuchować. Uruchom przeglądarkę i przejdź pod adres http://*ZoneMinder IP*/zm
+ZoneMinder powinien być zainstalowany oraz nasłuchować. Uruchom przeglądarkę i przejdź pod adres http://**ZoneMinder IP**/zm
 
 Oryginalna [instrukcja](http://zoneminder.readthedocs.io/en/stable/installationguide/ubuntu.html) instalacji.
 
@@ -74,7 +74,7 @@ Oryginalna [instrukcja](http://zoneminder.readthedocs.io/en/stable/installationg
 ![ZM_Camera1.jpg](http://airmonitor.pl/images/ZM_Camera1.jpg)
 ![ZM_Camera2.jpg](http://airmonitor.pl/images/ZM_Camera2.jpg)
 
-6. Opcjonalnie. Dodaj kamerę do domoticza. Pełny ImageURL to */zm/cgi-bin/zms?mode=single&monitor=1& (dla kamery o ID=1)*:
+6. Opcjonalnie. Dodaj kamerę do domoticza. Pełny ImageURL to **/zm/cgi-bin/zms?mode=single&monitor=1&** (dla kamery o ID=1):
 ![Domoticz_camera.jpg](http://airmonitor.pl/images/Domoticz_camera.jpg)
 
 
