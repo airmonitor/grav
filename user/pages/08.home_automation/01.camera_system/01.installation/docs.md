@@ -77,5 +77,13 @@ Oryginalna [instrukcja](http://zoneminder.readthedocs.io/en/stable/installationg
 6. Opcjonalnie. Dodaj kamerę do domoticza. Pełny ImageURL to **/zm/cgi-bin/zms?mode=single&monitor=1&** (dla kamery o ID=1):
 ![Domoticz_camera.jpg](http://airmonitor.pl/images/Domoticz_camera.jpg)
 
+7. Ustawienia redukujące ilość zajmowanego miejsca przez zarejestrowany obraz w ZoneMinder.
+
+    1. Decrease the frame rate.
+    2. Decrease the resolution.
+    3. Don't create analysed alarm images (Options->Config->CREATE_ANALYSIS_IMAGES)
+    4. Decrease the JPEG quality (Options->Images->JPEG_(ALARM)_FILE_QUALITY)
+    5. Change alarm zone settings to decrease the number of alarms.
+
 
 
