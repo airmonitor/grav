@@ -65,14 +65,13 @@ do sekcji *[Date]* dodaj:
 systemctl reload apache2
 ```
 
-ZoneMinder powinien być zainstalowany oraz nasłuchować. Uruchom przeglądarkę i przejdź pod adres http://<ZoneMinder IP>/zm
+ZoneMinder powinien być zainstalowany oraz nasłuchować. Uruchom przeglądarkę i przejdź pod adres http://*ZoneMinder IP*/zm
 
 Oryginalna [instrukcja](http://zoneminder.readthedocs.io/en/stable/installationguide/ubuntu.html) instalacji.
 
 
 5. Dodaj kamerę wspierając się na poniżych zrzutach ekranu:
 ![ZM_Camera1.jpg](http://airmonitor.pl/images/ZM_Camera1.jpg)
-
 ![ZM_Camera2.jpg](http://airmonitor.pl/images/ZM_Camera2.jpg)
 
 6. Opcjonalnie. Dodaj kamerę do domoticza. Pełny ImageURL to */zm/cgi-bin/zms?mode=single&monitor=1& (dla kamery o ID=1)*:
