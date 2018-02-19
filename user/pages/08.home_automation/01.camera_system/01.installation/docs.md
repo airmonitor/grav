@@ -31,7 +31,9 @@ cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/my.cnf
 nano /etc/mysql/my.cnf
 ```
 
-do sekcji [mysqld] dodaj:
+
+do sekcji *[mysqld]* dodaj:
+
 ```sql_mode = NO_ENGINE_SUBSTITUTION```
 
 ```
@@ -54,7 +56,9 @@ systemctl start zoneminder
 nano /etc/php/7.1/apache2/php.ini
 ```
 
-do sekcji [Date] dodaj:
+
+do sekcji *[Date]* dodaj:
+
 ```date.timezone = Europe/Warsaw```
 
 ```bash
