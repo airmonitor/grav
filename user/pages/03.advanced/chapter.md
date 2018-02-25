@@ -7,7 +7,7 @@ taxonomy:
 ##Rozszerzenie funkcjonalności stacji o sensor mierzący CO2 oraz TVOC dla Raspberry Pi
 
 ###Lista niezbędnych komponentów:
-1. Sensor CCS811 mierzący CO2 oraz TVOC, dostępny na [allegro.pl](http://allegro.pl/ccs811-czujnik-co2-czasteczek-organicznych-i6961041870.html), w polskich sklepach z elektroniką czy aliexpress
+1. Sensor CCS811 mierzący CO2 oraz TVOC, dostępny na [allegro.pl](http://bit.ly/2kitahS), w polskich sklepach z elektroniką czy aliexpress
 2. Stację pomiarową zbudowaną z działu poprzedniego [Temp/Wilg/Ciśn](http://lintech.hekko24.pl/intermediate)
 
 
@@ -30,8 +30,6 @@ echo "dtparam=i2c_baudrate=10000" >> /boot/config.txt
 cd /etc/configuration
 wget https://raw.githubusercontent.com/airmonitor/home_air_monitor/master/CCS811_RPi.py
 wget https://raw.githubusercontent.com/airmonitor/home_air_monitor/master/ccs811.py
-wget https://raw.githubusercontent.com/airmonitor/home_air_monitor/master/bme280.py.humidity.py
-wget https://raw.githubusercontent.com/airmonitor/home_air_monitor/master/bme280.py.temperature.py
 chmod +x /etc/configuration/*.py
 
 (crontab -l 2>/dev/null; echo "*/5 * * * * /etc/configuration/ccs811.py") | crontab -

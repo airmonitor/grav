@@ -117,7 +117,8 @@ print(TEMP_PRESSURE_HUMIDITY.read())
 ####Wysyłanie danych ze stacji opartej o EspEasy Mega
 #####Dla SDS0/11/18/21
 
->>>>>Pamiętaj aby podmienić **DOMOTICZ_IP** oraz **IDX**
+Pamiętaj aby podmienić **DOMOTICZ_IP** oraz **IDX**
+
 ```
 On SDS021#PM25 do
   SendToHTTP <DOMOTICZ_IP>,8080,/json.htm?type=command&param=udevice&idx=IDX&nvalue=0&svalue=[SDS021#PM25]
