@@ -8,7 +8,7 @@ taxonomy:
 
 ###Lista niezbędnych komponentów:
 1. Sensor CCS811 mierzący CO2 oraz TVOC, dostępny na [allegro.pl](http://bit.ly/2kitahS), w polskich sklepach z elektroniką czy aliexpress
-2. Stację pomiarową zbudowaną z działu poprzedniego [Temp/Wilg/Ciśn](http://lintech.hekko24.pl/intermediate)
+2. Stację pomiarową zbudowaną z działu poprzedniego [Temp/Wilg/Ciśn](http://airmonitor.pl/intermediate)
 
 
 
@@ -35,4 +35,4 @@ chmod +x /etc/configuration/*.py
 (crontab -l 2>/dev/null; echo "*/5 * * * * /etc/configuration/ccs811.py") | crontab -
 ```
 
->>>>>Skrypt pytona wykorzystuje wcześniej pobrany plik (configuration.data) z GitHub'a (patrz dział [AirMonitor](http://lintech.hekko24.pl/basics/installation)) oraz sensor BME280 dla kompensacji pomiarów CO2 i TVOC.
+>>>>>Skrypt pytona wykorzystuje wcześniej pobrany plik (configuration.data) z GitHub'a (patrz dział [AirMonitor](http://airmonitor.pl/basics/installation)) oraz sensor BME280 dla kompensacji pomiarów CO2 i TVOC.

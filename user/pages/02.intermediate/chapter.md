@@ -30,4 +30,4 @@ chmod +x /etc/configuration/*.py
 (crontab -l 2>/dev/null; echo "*/5 * * * * /etc/configuration/bme280.py") | crontab -
 ```
 
->>>>>Skrypt pytona wykorzystuje wcześniej pobrany plik (configuration.data) z GitHub'a (patrz dział [Pyły PM1, PM2,5, PM10](http://lintech.hekko24.pl/basics/requirements)).
+>>>>>Skrypt pytona wykorzystuje wcześniej pobrany plik (configuration.data) z GitHub'a (patrz dział [Pyły PM1, PM2,5, PM10](http://airmonitor.pl/basics/requirements)).
