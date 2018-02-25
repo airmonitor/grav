@@ -133,8 +133,8 @@ On CO2#PPM do
   SendToHTTP <DOMOTICZ_IP>,8080,/json.htm?type=command&param=udevice&idx=IDX&nvalue=0&svalue=[CO2#PPM]
 endon
 ```
-
 ![konfiguracja_espeasy_rules_mh-z19](http://airmonitor.pl/images/espeasy_rules_mh-z19.jpg)
+
 
 2. Następnie utwórz kilka virtualnych urządzeń - przełączników o następujących nazwach:
 * AirPurifier_ON_OFF
