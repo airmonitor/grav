@@ -114,30 +114,7 @@ print(PPM01_INSIDE.read())
 print(TEMP_PRESSURE_HUMIDITY.read())
 ```
 
-####Wysyłanie danych ze stacji opartej o EspEasy Mega
-#####Dla SDS0/11/18/21
-
-Pamiętaj aby podmienić **DOMOTICZ_IP** oraz **IDX**
-
-```
-On SDS021#PM25 do
-  SendToHTTP <DOMOTICZ_IP>,8080,/json.htm?type=command&param=udevice&idx=IDX&nvalue=0&svalue=[SDS021#PM25]
-  SendToHTTP <DOMOTICZ_IP>,8080,/json.htm?type=command&param=udevice&idx=IDX&nvalue=0&svalue=[SDS021#PM10]
-endon
-```
-![konfiguracja_espeasy_rules_sds](http://airmonitor.pl/images/espeasy_rules_sds021.jpg)
-
-
-#####Dla MH-Z19
-```
-On CO2#PPM do
-  SendToHTTP <DOMOTICZ_IP>,8080,/json.htm?type=command&param=udevice&idx=IDX&nvalue=0&svalue=[CO2#PPM]
-endon
-```
-![konfiguracja_espeasy_rules_mh-z19](http://airmonitor.pl/images/espeasy_rules_mh-z19.jpg)
-
-
-2. Następnie utwórz kilka virtualnych urządzeń - przełączników o następujących nazwach:
+3. Następnie utwórz kilka virtualnych urządzeń - przełączników o następujących nazwach:
 * AirPurifier_ON_OFF
 * AirPurifier_Auto
 * AirPurifier_Silent
@@ -146,10 +123,9 @@ endon
 * AirPurifier_Max
 * CO2
 
-3. Kolejny krok to ręczne utworzenie eventu czy to w typie LUA bądź Blocky z regułami mapującymi tryb działania filtra powietrza w oparciu o wskazania zewnętrznego sensora SDS lub PMS.
+4. Kolejny krok to ręczne utworzenie eventu czy to w typie LUA bądź Blocky z regułami mapującymi tryb działania filtra powietrza w oparciu o wskazania zewnętrznego sensora SDS lub PMS.
 
 >>>>>Tekst ten powstał w oparciu o materiały zebrane z [forum domoticza](http://www.domoticz.com/forum/viewtopic.php?t=15537)
-
 
 
 
