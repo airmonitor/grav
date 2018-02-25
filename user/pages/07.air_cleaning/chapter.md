@@ -69,7 +69,10 @@ DAEMON_ARGS="$DAEMON_ARGS -syslog"
 
 
 ####Xiaomi Air Purifier
->>>>>Pamiętaj aby umieścić prawidłowy adres IP filtra powietrza w komendzie **sudo echo airpurifier=Address IP filtra Xiaomi >> /etc/configuration/configuration.data**
+Pamiętaj aby umieścić prawidłowy adres IP filtra powietrza w komendzie **sudo echo airpurifier=Address IP filtra Xiaomi >> /etc/configuration/configuration.data**
+
+
+
 ```bash
 cd /home/pi/domoticz/domoticz/plugins
 git clone https://github.com/kofec/domoticz-AirPurifier
@@ -114,12 +117,11 @@ print(TEMP_PRESSURE_HUMIDITY.read())
 ####Wysyłanie danych ze stacji opartej o EspEasy Mega
 #####Dla SDS0/11/18/21
 
-
-
+>>>>>Pamiętaj aby podmienić **DOMOTICZ_IP** oraz **IDX**
 ```
 On SDS021#PM25 do
-  SendToHTTP 192.168.1.145,8080,/json.htm?type=command&param=udevice&idx=33&nvalue=0&svalue=[SDS021#PM25]
-  SendToHTTP 192.168.1.145,8080,/json.htm?type=command&param=udevice&idx=34&nvalue=0&svalue=[SDS021#PM10]
+  SendToHTTP <DOMOTICZ_IP>,8080,/json.htm?type=command&param=udevice&idx=IDX&nvalue=0&svalue=[SDS021#PM25]
+  SendToHTTP <DOMOTICZ_IP>,8080,/json.htm?type=command&param=udevice&idx=IDX&nvalue=0&svalue=[SDS021#PM10]
 endon
 ```
 ![konfiguracja_espeasy_rules_sds](http://airmonitor.pl/images/espeasy_rules_sds021.jpg)
@@ -128,7 +130,7 @@ endon
 #####Dla MH-Z19
 ```
 On CO2#PPM do
-  SendToHTTP 192.168.1.145,8080,/json.htm?type=command&param=udevice&idx=170&nvalue=0&svalue=[CO2#PPM]
+  SendToHTTP <DOMOTICZ_IP>,8080,/json.htm?type=command&param=udevice&idx=IDX&nvalue=0&svalue=[CO2#PPM]
 endon
 ```
 
@@ -141,6 +143,7 @@ endon
 * AirPurifier_Low
 * AirPurifier_Medium
 * AirPurifier_Max
+* CO2
 
 3. Kolejny krok to ręczne utworzenie eventu czy to w typie LUA bądź Blocky z regułami mapującymi tryb działania filtra powietrza w oparciu o wskazania zewnętrznego sensora SDS lub PMS.
 
