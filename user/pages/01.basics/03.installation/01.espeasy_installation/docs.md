@@ -1,5 +1,5 @@
 ---
-title: Instalacja
+title: EspEasy Mega
 taxonomy:
     category: docs
 ---
