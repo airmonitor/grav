@@ -20,33 +20,32 @@ taxonomy:
 
 ####Domoticz
 
-```
-sudo apt-get install cmake make gcc g++ libssl-dev git libcurl4-openssl-dev libusb-dev python3-dev libudev-dev -y
-sudo apt-get remove libboost-dev libboost-thread-dev libboost-system-dev libboost-atomic-dev libboost-regex-dev libboost-date-time1.55-dev libboost-date-time1.55.0 libboost-atomic1.55.0 libboost-regex1.55.0 libboost-iostreams1.55.1 libboost-iostreams1.55.0 libboost-iostreams1.55.0 libboost-iostreams1.55.0 libboost-serialization1.55-dev libboost-serialization1.55.0 libboost-system1.55-dev libboost-system1.55.0 libboost-thread1.55-dev libboost-thread1.55.0 libboost1.55-dev -y
+```bash
+sudo apt-get install htop dos2unix vim apt-show-versions mailutils exfat-fuse exfat-utils screen curl wiringpi i2c-tools aptitude watchdog zlib1g-dev -y
+sudo apt-get install cmake make gcc g++ libssl-dev git libcurl4-openssl-dev libusb-dev libudev-dev libffi-dev python3.5 python3.5-dev python3-pip -y
+sudo apt-get remove libboost-dev libboost-thread-dev libboost-system-dev libboost-atomic-dev libboost-regex-dev libboost-date-time1.62-dev libboost-date-time1.62.0 libboost-atomic1.62.0 libboost-regex1.62.0 libboost-iostreams1.62.0 libboost-serialization1.62-dev libboost-serialization1.62.0 libboost-system1.62-dev libboost-system1.62.0 libboost-thread1.62-dev libboost-thread1.62.0 libboost1.62-dev build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev -y
 sudo apt-get autoremove
 mkdir -p /home/pi/domoticz
 cd /home/pi/domoticz/
 git clone https://github.com/OpenZWave/open-zwave open-zwave-read-only
 cd open-zwave-read-only
-git pull
 make
 cd ..
 
 mkdir boost
 cd boost
-wget https://dl.bintray.com/boostorg/release/1.65.1/source/boost_1_65_1.tar.gz
-tar xvfz boost_1_65_1.tar.gz
-rm boost_1_65_1.tar.gz
-cd boost_1_65_1/
+wget https://dl.bintray.com/boostorg/release/1.66.0/source/boost_1_66_0.tar.gz
+tar xfz boost_1_66_0.tar.gz
+rm boost_1_66_0.tar.gz
+cd boost_1_66_0/
 ./bootstrap.sh
 ./b2 stage threading=multi link=static --with-thread --with-date_time --with-system --with-atomic --with-regex
 sudo ./b2 install threading=multi link=static --with-thread --with-date_time --with-system --with-atomic --with-regex
 cd ../../
 rm -Rf boost/
 
-git clone https://github.com/domoticz/domoticz.git domoticz
+git clone -b development https://github.com/domoticz/domoticz.git domoticz
 cd domoticz
-git pull
 cmake -DBOOST_LIBRARYDIR=/usr/lib/x86_64-linux-gnu -DCMAKE_BUILD_TYPE=Release -DBoost_USE_MULTITHREADED=OFF
 cmake -USE_STATIC_OPENZWAVE -DCMAKE_BUILD_TYPE=Release CMakeLists.txt
 sudo fallocate -l 1G /tmp/tmpswap
@@ -67,67 +66,23 @@ DAEMON_ARGS="$DAEMON_ARGS -log /tmp/domoticz.txt"
 DAEMON_ARGS="$DAEMON_ARGS -syslog"
 ```
 
-####Node.js
-```
-cd /home/pi
-wget https://nodejs.org/dist/latest-v7.x/node-v7.10.1-linux-armv7l.tar.gz
-tar -xvf node-v7.10.1-linux-armv7l.tar.gz
-cd node-v7.10.1-linux-armv7l/
-sudo cp -R lib/* /lib/
-sudo cp -R bin/* /bin/
-sudo cp -R include/* /usr/include/
-sudo cd /root/
-sudo /bin/npm i -g npm
-sudo /bin/npm update -g
-sudo /bin/npm install --save miio
-sudo /bin/npm install -g miio
-sudo ln -sf /lib/node_modules/miio/cli/index.js /usr/local/bin/miio
-sudo ln -sf /lib/node_modules/miio/cli/index.js /bin/miio
-sudo rm -fr node-v7.10.1-linux-armv7l*
-sudo ln -sf /root/node_modules /etc/configuration/node_modules
-sudo mkdir -p /etc/configuration/xiaomiairpurifier/node_modules
-sudo ln -sf /root/node_modules /etc/configuration/xiaomiairpurifier/node_modules
-cd /home/pi
-rm node-v7.10.1-linux-armv7l.tar.gz
-sudo mkdir /etc/configuration/xiaomiairpurifier
-```
-
 
 
 ####Xiaomi Air Purifier
 >>>>>Pamiętaj aby umieścić prawidłowy adres IP filtra powietrza w komendzie **sudo echo airpurifier=Address IP filtra Xiaomi >> /etc/configuration/configuration.data**
-
+```bash
+cd /home/pi/domoticz/domoticz/plugins
+git clone https://github.com/kofec/domoticz-AirPurifier
+chmod +x domoticz-AirPurifier/*
 ```
-cd /tmp/
-sudo git clone https://github.com/airmonitor/home_air_monitor xiaomiairpurifier
-sudo mv /tmp/xiaomiairpurifier/xiaomiairpurifier /etc/configuration/xiaomiairpurifier
-sudo chmod +x /etc/configuration/xiaomiairpurifier/*
-sudo echo "airpurifier=<Address IP filtra Xiaomi>" >> /etc/configuration/configuration.data
-wget https://raw.githubusercontent.com/airmonitor/home_air_monitor/master/xiaomiairpurifier/miio_update_xiaomi_devices.sh
-sudo chmod +x miio_update_xiaomi_devices.sh
-sudo (crontab -l 2>/dev/null; echo "@reboot * * * * /etc/configuration/miio_update_xiaomi_devices.sh") | crontab -
-```
-
-Do katalogu /etc/configuration/xiaomiairpurifier zostaną pobrane niezbędne pliki a jednym z nich będzie airpurifier.js. Poniżej przykład ręcznego wywołania skryptu celem uzyskania danego trybu działania filtra Xiaomi.
-
-```
-node airpurifier.js 192.168.0.240 power true
-node airpurifier.js 192.168.0.240 power false
-node airpurifier.js 192.168.0.240 status
-node airpurifier.js 192.168.0.240 led off
-node airpurifier.js 192.168.0.240 buzzer true
-node airpurifier.js 192.168.0.240 fanmode auto
-node airpurifier.js 192.168.0.240 fanmode favorite
-node airpurifier.js 192.168.0.240 fanspeed 16
-node airpurifier.js 192.168.0.240 listfanmodes
-``` 
-
-
 
 ###Konfiguracja systemu Domoticz
 1. Utwórz wirtualne, niestandardowe urządzenie o nazwie SDS021 bądź PMS7003 w zależności, który sensor wykorzystujesz. Możesz oczywiście uzyć innej nazwy :)
 2. Przy uzyciu bash'a bądź pythona przesyłaj dane z sensora do systemu domoticz. Poniżej przykład komendy w języku python:
-```
+
+
+####Wysyłanie danych ze stacji opartej na Raspberry Pi 0 W
+```python
 import urllib.request
 from configparser import ConfigParser
 parser = ConfigParser()
@@ -156,47 +111,28 @@ print(PPM01_INSIDE.read())
 print(TEMP_PRESSURE_HUMIDITY.read())
 ```
 
-1. Utwórz nowy event - typ LUA o następującej treści:
+####Wysyłanie danych ze stacji opartej o EspEasy Mega
+#####Dla SDS0/11/18/21
+
+
+
 ```
-commandArray = {}
-if (devicechanged['AirPurifier_ON_OFF'] == 'Off') then
-    os.execute ('/etc/configuration/xiaomiairpurifier/filter_0_OFF.py')
-end
-if (devicechanged['AirPurifier_AUTO'] == 'Off') then
-    os.execute ('/etc/configuration/xiaomiairpurifier/filter_0_OFF.py')
-end
-if (devicechanged['AirPurifier_SILENT'] == 'Off') then
-    os.execute ('/etc/configuration/xiaomiairpurifier/filter_0_OFF.py')
-end
-if (devicechanged['AirPurifier_LOW'] == 'Off') then
-    os.execute ('/etc/configuration/xiaomiairpurifier/filter_0_OFF.py')
-end
-if (devicechanged['AirPurifier_MEDIUM'] == 'Off') then
-    os.execute ('/etc/configuration/xiaomiairpurifier/filter_0_OFF.py')
-end
-if (devicechanged['AirPurifier_MAX'] == 'Off') then
-    os.execute ('/etc/configuration/xiaomiairpurifier/filter_0_OFF.py')
-end
-if (devicechanged['AirPurifier_ON_OFF'] == 'On') then
-    os.execute ('/etc/configuration/xiaomiairpurifier/filter_0_ON.py')
-end
-if (devicechanged['AirPurifier_AUTO'] == 'On') then
-    os.execute ('/etc/configuration/xiaomiairpurifier/filter_0_AUTO.py')
-end
-if (devicechanged['AirPurifier_LOW'] == 'On') then
-    os.execute ('/etc/configuration/xiaomiairpurifier/filter_0_LOW.py')
-end
-if (devicechanged['AirPurifier_MEDIUM'] == 'On') then
-    os.execute ('/etc/configuration/xiaomiairpurifier/filter_0_MEDIUM.py')
-end
-if (devicechanged['AirPurifier_MAX'] == 'On') then
-    os.execute ('/etc/configuration/xiaomiairpurifier/filter_0_MAX.py')
-end
-if (devicechanged['AirPurifier_SILENT'] == 'On') then
-    os.execute ('/etc/configuration/xiaomiairpurifier/filter_0_SILENT.py')
-end
-return commandArray
+On SDS021#PM25 do
+  SendToHTTP 192.168.1.145,8080,/json.htm?type=command&param=udevice&idx=33&nvalue=0&svalue=[SDS021#PM25]
+  SendToHTTP 192.168.1.145,8080,/json.htm?type=command&param=udevice&idx=34&nvalue=0&svalue=[SDS021#PM10]
+endon
 ```
+![konfiguracja_espeasy_rules_sds](http://airmonitor.pl/images/espeasy_rules_sds021.jpg)
+
+
+#####Dla MH-Z19
+```
+On CO2#PPM do
+  SendToHTTP 192.168.1.145,8080,/json.htm?type=command&param=udevice&idx=170&nvalue=0&svalue=[CO2#PPM]
+endon
+```
+
+![konfiguracja_espeasy_rules_mh-z19](http://airmonitor.pl/images/espeasy_rules_mh-z19.jpg)
 
 2. Następnie utwórz kilka virtualnych urządzeń - przełączników o następujących nazwach:
 * AirPurifier_ON_OFF
