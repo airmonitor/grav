@@ -67,15 +67,14 @@ DAEMON_ARGS="$DAEMON_ARGS -syslog"
 
 
 ####Xiaomi Air Purifier
-Pamiętaj aby umieścić prawidłowy adres IP filtra powietrza w komendzie **sudo echo airpurifier=Address IP filtra Xiaomi >> /etc/configuration/configuration.data**
-
-
 
 ```bash
 cd /home/pi/domoticz/domoticz/plugins
 git clone https://github.com/kofec/domoticz-AirPurifier
 chmod +x domoticz-AirPurifier/*
 ```
+
+>>>>>Dodaj filtr do domoticza korzystając z [opisu](https://github.com/kofec/domoticz-AirPurifier)
 
 ###Konfiguracja systemu Domoticz
 1. Utwórz wirtualne, niestandardowe urządzenie o nazwie SDS021 bądź PMS7003 w zależności, który sensor wykorzystujesz. Możesz oczywiście uzyć innej nazwy :)
