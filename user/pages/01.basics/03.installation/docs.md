@@ -37,8 +37,12 @@ Przykład prawidłowo wypełnionego pliku airmonitor.txt, **pamiętaj aby umieś
 >>>>>**Źródła wszystkich skryptów znajdziesz na [GitHub](https://github.com/airmonitor/home_air_monitor)**
 
 
-##Instalacja manualna dla sensorów SDS*
-```js
+##Instalacja manualna dla sensorów SDS (Raspbian Stretch)*
+```bash
+cp /etc/default/keyboard /etc/default/keyboard.bk
+sed  -i '/XKBLAYOUT/s/gb/us/g' /etc/default/keyboard
+cp /boot/cmdline.txt /boot/cmdline.txt.bk
+cp /boot/config.txt /boot/config.txt.bk
 echo "dtoverlay=pi3-disable-bt" >> /boot/config.txt
 echo "dtparam=i2c_arm=on" >> /boot/config.txt
 echo "enable_uart=1" >> /boot/config.txt
@@ -46,18 +50,21 @@ sed  -i 's/fsck.repair=yes/fsck.repair=yes fsck.mode=force/g' /boot/cmdline.txt
 sed  -i 's/console=serial0,115200 //g' /boot/cmdline.txt
 echo "i2c-dev" >> /etc/modules
 
+
 apt-get update
 apt-get upgrade -y
-apt-get install htop apt-mark dos2unix python3 python3-pip python3-serial python3-pip vim apt-show-versions mailutils exfat-fuse exfat-utils screen curl wiringpi i2c-tools aptitude watchdog
+apt-get install htop dos2unix vim apt-show-versions mailutils exfat-fuse exfat-utils screen curl wiringpi i2c-tools aptitude watchdog zlib1g-dev cmake make gcc g++ libssl-dev git libcurl4-openssl-dev libusb-dev libudev-dev libffi-dev python3.5 python3.5-dev python3-pip -y
+apt-get remove libboost-dev libboost-thread-dev libboost-system-dev libboost-atomic-dev libboost-regex-dev libboost-date-time1.62-dev libboost-date-time1.62.0 libboost-atomic1.62.0 libboost-regex1.62.0 libboost-iostreams1.62.0 libboost-serialization1.62-dev libboost-serialization1.62.0 libboost-system1.62-dev libboost-system1.62.0 libboost-thread1.62-dev libboost-thread1.62.0 libboost1.62-dev build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev -y
 
 pip3 install -U pip
 pip3 install -U setuptools
 pip3 install -U pyserial
 pip3 install -U requests
 pip3 install -U RPi.bme280
-pip3 install -U influxdb
 pip3 install -U configparser
 pip3 install -U urllib3
+pip3 install -U cffi
+pip3 install -U python-miio
 
 
 mkdir /etc/configuration
@@ -89,7 +96,11 @@ systemctl enable watchdog
 
 
 ###Instalacja manualna dla sensorów PMS*
-```js
+```bash
+cp /etc/default/keyboard /etc/default/keyboard.bk
+sed  -i '/XKBLAYOUT/s/gb/us/g' /etc/default/keyboard
+cp /boot/cmdline.txt /boot/cmdline.txt.bk
+cp /boot/config.txt /boot/config.txt.bk
 echo "dtoverlay=pi3-disable-bt" >> /boot/config.txt
 echo "dtparam=i2c_arm=on" >> /boot/config.txt
 echo "enable_uart=1" >> /boot/config.txt
@@ -99,16 +110,18 @@ echo "i2c-dev" >> /etc/modules
 
 apt-get update
 apt-get upgrade -y
-apt-get install htop apt-mark dos2unix python3 python3-pip python3-serial python3-pip vim apt-show-versions mailutils exfat-fuse exfat-utils screen curl wiringpi i2c-tools aptitude watchdog
+apt-get install htop dos2unix vim apt-show-versions mailutils exfat-fuse exfat-utils screen curl wiringpi i2c-tools aptitude watchdog zlib1g-dev cmake make gcc g++ libssl-dev git libcurl4-openssl-dev libusb-dev libudev-dev libffi-dev python3.5 python3.5-dev python3-pip -y
+apt-get remove libboost-dev libboost-thread-dev libboost-system-dev libboost-atomic-dev libboost-regex-dev libboost-date-time1.62-dev libboost-date-time1.62.0 libboost-atomic1.62.0 libboost-regex1.62.0 libboost-iostreams1.62.0 libboost-serialization1.62-dev libboost-serialization1.62.0 libboost-system1.62-dev libboost-system1.62.0 libboost-thread1.62-dev libboost-thread1.62.0 libboost1.62-dev build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev -y
 
 pip3 install -U pip
 pip3 install -U setuptools
 pip3 install -U pyserial
 pip3 install -U requests
 pip3 install -U RPi.bme280
-pip3 install -U influxdb
 pip3 install -U configparser
 pip3 install -U urllib3
+pip3 install -U cffi
+pip3 install -U python-miio
 
 
 mkdir /etc/configuration
@@ -151,6 +164,4 @@ Po restarcie ekran startowy powinien wyświetlać nową nazwę:
 2. Przejdź do zakładki **Controllers** a następnie skonfiguruj usługę OpenHAB MQTT wypełniając pola wg poniższego zrzutu ekranu:
 ![Zrzut ekranu prezentujący zakładkę controllers](http://airmonitor.pl/images/image31.jpg)
 
-3. W zakładce **Devices** dodaj sensor Nova SDS011/018/198/021 postępując według poniżej ilustracji:
-![Zrzut ekranu prezentujący zakładkę devices](http://airmonitor.pl/images/image29.jpg)
 

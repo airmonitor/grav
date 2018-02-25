@@ -57,7 +57,15 @@ Dla sensora Plantower [PMS7003](http://allegro.pl/show_item.php?item=7097428244)
 
 >>>>>Pamiętaj port TXD z RPi0W połącz z RXD na [PMS7003](http://allegro.pl/show_item.php?item=7097428244) oraz RXD z RPi0W połącz z TXD na [PMS7003](http://allegro.pl/show_item.php?item=7097428244) 
 
-###Wersja rozszerzona w oparciu o sensor SDS* oraz EspEasy Mega
+###Wersja w oparciu sensor SDS* oraz EspEasy Mega na przykładzie Wemos D1 mini v2
+####Schemat połączenia
+![Schemat połączenia dla SDS021/11/18](http://airmonitor.pl/images/espeasy_sds_schema.jpg)
 
-![Schemat wyprowadzenia przewodów dla SDS021/11/18](http://airmonitor.pl/images/image32.jpg)
+####Konfiguracja EspEasy Mega
+![konfiguracja_espeasy_mega_bme280](http://airmonitor.pl/images/espeasy_sds_configuration.jpg)
+
+3. W zakładce **Devices** dodaj sensor Nova SDS011/018/198/021 postępując według poniżej ilustracji:
+![Zrzut ekranu prezentujący zakładkę devices](http://airmonitor.pl/images/image29.jpg)
+
+
 
