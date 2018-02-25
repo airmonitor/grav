@@ -61,11 +61,6 @@ Dla sensora Plantower [PMS7003](http://allegro.pl/show_item.php?item=7097428244)
 ####Schemat połączenia
 ![Schemat połączenia dla SDS021/11/18](http://airmonitor.pl/images/espeasy_sds_schema.jpg)
 
-####Konfiguracja EspEasy Mega
-![konfiguracja_espeasy_mega_bme280](http://airmonitor.pl/images/espeasy_sds_configuration.jpg)
-
-3. W zakładce **Devices** dodaj sensor Nova SDS011/018/198/021 postępując według poniżej ilustracji:
-![Zrzut ekranu prezentujący zakładkę devices](http://airmonitor.pl/images/image29.jpg)
 
 
 

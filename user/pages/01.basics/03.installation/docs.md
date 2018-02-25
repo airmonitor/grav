@@ -165,3 +165,6 @@ Po restarcie ekran startowy powinien wyświetlać nową nazwę:
 ![Zrzut ekranu prezentujący zakładkę controllers](http://airmonitor.pl/images/image31.jpg)
 
 
+3. W zakładce **Devices** dodaj sensor Nova SDS011/018/198/021 postępując według poniżej ilustracji:
+![Zrzut ekranu prezentujący zakładkę devices](http://airmonitor.pl/images/espeasy_sds_configuration.jpg)
+
