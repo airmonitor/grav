@@ -23,6 +23,8 @@ sudo apt-get install htop dos2unix vim apt-show-versions mailutils exfat-fuse ex
 sudo apt-get install cmake make gcc g++ libssl-dev git libcurl4-openssl-dev libusb-dev libudev-dev libffi-dev python3.5 python3.5-dev python3-pip -y
 sudo apt-get remove libboost-dev libboost-thread-dev libboost-system-dev libboost-atomic-dev libboost-regex-dev libboost-date-time1.62-dev libboost-date-time1.62.0 libboost-atomic1.62.0 libboost-regex1.62.0 libboost-iostreams1.62.0 libboost-serialization1.62-dev libboost-serialization1.62.0 libboost-system1.62-dev libboost-system1.62.0 libboost-thread1.62-dev libboost-thread1.62.0 libboost1.62-dev build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev -y
 sudo apt-get autoremove
+cp /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
+
 mkdir -p /home/pi/domoticz
 cd /home/pi/domoticz/
 git clone https://github.com/OpenZWave/open-zwave open-zwave-read-only
