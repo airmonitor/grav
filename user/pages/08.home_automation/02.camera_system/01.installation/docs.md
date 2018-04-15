@@ -16,12 +16,14 @@ taxonomy:
 ```bash
 sudo su
 tasksel install lamp-server
-add-apt-repository ppa:iconnor/zoneminder
+add-apt-repository ppa:iconnor/zoneminder-master
 apt-get update
 apt-get upgrade
 apt-get dist-upgrade
 apt-get install zoneminder
+vi /etc/systemd/system/multi-user.target.wants/apache2.service
 ```
+Linię **PrivateTmp=True** zmienić na  **PrivateTmp=False**
 
 **Konfiguracja MySQL:**
 
