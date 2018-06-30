@@ -10,6 +10,10 @@ taxonomy:
 2. Podłącz kamerę do swojej sieci wifi wykorzystując aplikację mobilną MiHome i *pomiń aktualizację firmware'u*
 3. Zmodyfikuj ustawienia kamery wykorzystując [instrukcję](https://github.com/samtap/fang-hacks)
 
+###Alternatywny firmware dla Dafang:
+1. Zestaw połączenie wifi wykorzystując aplikację Xiaomi MiHome. Potwierdzisz w ten sposób, że kamera na pewno działa bez jakichkolwiek modyfikacji.
+2. Wykorzystując instrukcję oraz firmware z [repozytorim github](https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks) zainstaluj nowy firmware
+
 ###Instalacja i konfiguracja ZoneMinder'a (wersja dla Ubuntu)
 4. Zainstaluj zoneminder wykorzystując opis poniżej:
 
@@ -72,9 +76,15 @@ ZoneMinder powinien być zainstalowany oraz nasłuchować. Uruchom przeglądark�
 Oryginalna [instrukcja](http://zoneminder.readthedocs.io/en/stable/installationguide/ubuntu.html) instalacji.
 
 
-5. Dodaj kamerę wspierając się na poniżych zrzutach ekranu:
-![ZM_Camera1.jpg](http://airmonitor.pl/images/ZM_Camera1.jpg)
-![ZM_Camera2.jpg](http://airmonitor.pl/images/ZM_Camera2.jpg)
+5. Dodaj kamerę do ZM:
+    * Xiaofang:
+    ![ZM_Camera1.jpg](http://airmonitor.pl/images/ZM_Camera1.jpg)
+    ![ZM_Camera2.jpg](http://airmonitor.pl/images/ZM_Camera2.jpg)
+    * Dafang:
+    ![xiaomi_dafang_02.jpg](http://airmonitor.pl/images/xiaomi_dafang_02.jpg)
+    ![xiaomi_dafang_03.jpg](http://airmonitor.pl/images/xiaomi_dafang_03.jpg)
+    ![xiaomi_dafang_04.jpg](http://airmonitor.pl/images/xiaomi_dafang_04.jpg)
+    ![xiaomi_dafang_05.jpg](http://airmonitor.pl/images/xiaomi_dafang_05.jpg)
 
 6. Opcjonalnie. Dodaj kamerę do domoticza. Pełny ImageURL to **/zm/cgi-bin/zms?mode=single&monitor=1&** (dla kamery o ID=1):
 ![Domoticz_camera.jpg](http://airmonitor.pl/images/Domoticz_camera.jpg)
